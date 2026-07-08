@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    @font-face {
+        font-family: "Rubik Regular";
+        src: url("../../assets/fonts/rubik/static/Rubik-Regular.ttf") format("truetype");
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Rubik Bold";
+        src: url("../../assets/fonts/rubik/static/Rubik-Bold.ttf") format("truetype");
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "RaleWay Bold";
+        src: url("../../assets/fonts/raleway/static/Raleway-Bold.ttf") format("truetype");
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "RaleWay Extra Bold";
+        src: url("../../assets/fonts/rubik/static/Rubik-ExtraBold.ttf") format("truetype");
+        font-display: swap;
+    }
+}
+
+@layer components {
+
+    @media only screen and (min-width: 640px) {
+        header {
+            background: url("../../assets/images/header-side-bg.png") no-repeat right;
+        }
+    }
+    .feature-btn {
+        @apply uppercase w-36 h-10 rounded bg-spacialPink text-white tracking-widest text-xs font-railwayExtraBold leading-3 mt-3;
+    }
+    .title {
+        @apply text-black text-3xl md:text-4xl lg:text-[44px] font-rubikBold md:leading-10 lg:leading-[55px];
+    }
+    .description {
+        @apply text-xs text-[#616161] leading-4 tracking-wide line-clamp-6;
+    }
+    .support-bg {
+        background: url("../../assets/images/support-image.png") no-repeat center / cover;
+    }
+    .support-guide {
+        box-shadow: 0 0 2rem #587EEC26;
+    }
+    .support-div {
+        @apply flex flex-col justify-center items-center gap-y-3 font-rubikBold;
+    }
+    .support-title {
+        @apply text-4xl leading-10 tracking-widest text-spacialPink;
+    }
+    .support-description {
+        @apply text-black tracking-widest uppercase text-xs leading-3 line-clamp-6;
+    }
+    .tip-box {
+        @apply lg:w-[278px] py-9 px-5 flex flex-col justify-center items-center gap-y-1 cursor-pointer hover:scale-110 transition-all rounded-lg text-center;
+        box-shadow: 0 0 2rem #587EEC2E;
+    }
+    .tip-title {
+        @apply font-rubikBold text-black text-xs md:text-[15px] lg:text-base leading-6 tracking-wider capitalize mt-12;
+    }
+    .tip-description {
+        @apply text-[#616161] tracking-wider leading-4 text-xs line-clamp-2;
+    }
+    .footer-text {
+        @apply text-[#616161] tracking-wider leading-4 text-xs capitalize text-center;
+    }
+}
